@@ -1,0 +1,4 @@
+﻿  源.c
+f:\牛客\007整数反转\007整数反转\源.c(13): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+  007整数反转.vcxproj -> F:\牛客\007整数反转\Debug\007整数反转.exe
+  007整数反转.vcxproj -> F:\牛客\007整数反转\Debug\007整数反转.pdb (Full PDB)
