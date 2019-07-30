@@ -1,0 +1,4 @@
+﻿  源.c
+f:\牛客\009回文\009回文\源.c(16): warning C4716: “isPalindrome”: 必须返回一个值
+  009回文.vcxproj -> F:\牛客\009回文\Debug\009回文.exe
+  009回文.vcxproj -> F:\牛客\009回文\Debug\009回文.pdb (Full PDB)
