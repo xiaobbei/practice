@@ -1,4 +1,6 @@
 ﻿  Tetris.c
-f:\代码\俄罗斯方块test\俄罗斯方块test\tetris.c(689): warning C4013: “main”未定义；假设外部返回 int
-  俄罗斯方块Test.vcxproj -> F:\代码\俄罗斯方块Test\Debug\俄罗斯方块Test.exe
-  俄罗斯方块Test.vcxproj -> F:\代码\俄罗斯方块Test\Debug\俄罗斯方块Test.pdb (Full PDB)
+f:\practice\俄罗斯方块test\俄罗斯方块test\tetris.c(689): warning C4013: “main”未定义；假设外部返回 int
+  Test.c
+  正在生成代码...
+  俄罗斯方块Test.vcxproj -> F:\practice\俄罗斯方块Test\Debug\俄罗斯方块Test.exe
+  俄罗斯方块Test.vcxproj -> F:\practice\俄罗斯方块Test\Debug\俄罗斯方块Test.pdb (Full PDB)
