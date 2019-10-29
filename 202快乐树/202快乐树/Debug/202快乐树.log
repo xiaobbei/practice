@@ -1,0 +1,5 @@
+﻿  源.cpp
+f:\力扣\202快乐树\202快乐树\源.cpp(51): warning C4715: “isHappy_1”: 不是所有的控件路径都返回值
+f:\力扣\202快乐树\202快乐树\源.cpp(76): warning C4715: “isHappy_2”: 不是所有的控件路径都返回值
+  202快乐树.vcxproj -> F:\力扣\202快乐树\Debug\202快乐树.exe
+  202快乐树.vcxproj -> F:\力扣\202快乐树\Debug\202快乐树.pdb (Full PDB)
