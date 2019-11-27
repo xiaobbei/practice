@@ -26,7 +26,7 @@ int romanToInt(char * s) {
 
 int main()
 {
-	char *s = "MCMXCIV";
+	char *s = "XXVII";
 	int i = romanToInt(s);
 	printf("%d",i);
 	system("pause");
