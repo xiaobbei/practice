@@ -36,24 +36,19 @@ bool String_Contain(string A, string B)
 }
 */
 
-//素数相乘
+//哈希表+位图的思想
 bool String_Contain(string A, string B)
 {
-	const int arr[26] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101 };
-	int sum_A = 1;
+	int hash = 0;
 	for (int i = 0; i < A.size(); ++i)
 	{
-		int temp = arr[A[i] - 'A'];
-		if (sum_A%temp)   //相同的元素只保存一份
-			sum_A *= temp;
+		hash |= (1 << A[i] - 'A');
 	}
-	for (int i = 0; i < B.size(); ++i)
+
+	for (int j = 0; j < B.size(); ++j)
 	{
-		int temp = arr[B[i] - 'A'];
-		if (temp % sum_A)
-		{
+		if ((hash &(1 << B[j] - 'A')) == 0)
 			return false;
-		}
 	}
 	return true;
 }
