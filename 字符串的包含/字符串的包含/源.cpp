@@ -1,28 +1,68 @@
 #include<iostream>
 #include<string>
+#include<algorithm>
 
 using namespace std;
-
-bool Find_string_contain(string A, string B)
+/*暴力法求解
+bool String_Contain(string A, string B)
 {
-	for (int i = 0; i < A.size(); ++i)
+	for (int i = 0; i < B.size(); ++i)
 	{
 		int j;
-		for (j = 0; j < B.size(); ++j)
-		{
-		}
+		for (j = 0; j < A.size() && (A[j] != B[i]); ++j)  //每次遍历B中的字符都要将A遍历一遍
+			;
 		if (j >= A.size())
 			return false;
 	}
 	return true;
 }
+*/
 
+
+//先对字符串进行排序
+/*
+bool String_Contain(string A, string B)
+{
+	sort(A.begin(), A.end());
+	sort(B.begin(), B.end());
+	for (int i = 0, j = 0; j < B.size();++j)
+	{
+		while ((i < A.size()) && (A[i] < B[j])) 
+			i++;
+		if (i>=A.size() || A[i]>B[j])  //如果查找完，发现i找到A的末尾，或者A[i]>B[j]，表示后面的字符都不存在，因为字符有序
+			return false;
+	}
+	return true;
+}
+*/
+
+//素数相乘
+bool String_Contain(string A, string B)
+{
+	const int arr[26] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101 };
+	int sum_A = 1;
+	for (int i = 0; i < A.size(); ++i)
+	{
+		int temp = arr[A[i] - 'A'];
+		if (sum_A%temp)   //相同的元素只保存一份
+			sum_A *= temp;
+	}
+	for (int i = 0; i < B.size(); ++i)
+	{
+		int temp = arr[B[i] - 'A'];
+		if (temp % sum_A)
+		{
+			return false;
+		}
+	}
+	return true;
+}
 int main()
 {
 	string A, B;
 	while (cin >> A >> B)
 	{
-		cout << Find_string_contain(A, B) << endl;
+		cout << String_Contain(A, B) << endl;
 	}
 	system("pause");
 	return 0;
